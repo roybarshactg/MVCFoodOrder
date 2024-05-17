@@ -1,0 +1,45 @@
+﻿@model FoodOrder.Models.OrderModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<body style="background-color: #FFF9C4;">
+    <h1>Edit Your Order</h1>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PersonName" class="control-label"></label>
+                    <input id="textboxcolor" asp-for="PersonName" class="form-control" />
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PersonAddress" class="control-label"></label>
+                    <input id="textboxcolor" asp-for="PersonAddress" class="form-control" />
+                    <span asp-validation-for="PersonAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quantity" class="control-label"></label>
+                    <input id="textboxcolor" asp-for="Quantity" class="form-control" />
+                    <span asp-validation-for="Quantity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" asp-for="Total" class="form-control"/>
+                    <input type="hidden" asp-for="Id" class="form-control" />
+                     <input type="hidden" asp-for="FoodId" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input id="CreateBtn" type="submit" value="Update Order" class="btn btn-warning" />
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+            <img src="~/Images/edit.png" style="width:420px;"/>
+        </div>
+    </div>
+</body>

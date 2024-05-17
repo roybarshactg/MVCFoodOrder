@@ -1,0 +1,27 @@
+﻿@model FoodOrder.Models.OrderModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<body style="background-color: #FFF9C4;">
+    <h1>Cancel Order</h1>
+
+    <div class="row">
+        <div class="col">
+            <h3>Are you sure you want to cancel this order?</h3>
+            <div>
+                <hr />
+                <form asp-action="Delete">
+                    <input id="delete" type="submit" value="Delete" class="btn btn-danger" style="width:150px;" />
+                    <a style="width:100px !important;" id="delete" class="btn btn-warning" href="@Url.Action("Details", "Order", new { id = Model.Id })">
+                        Back
+                    <a />
+                </form>
+            </div>
+        </div>
+        <div class="col">
+            <img src="~/Images/sorry.png" style="width:500px"/>
+        </div>
+    </div>
+</body>

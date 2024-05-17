@@ -1,0 +1,40 @@
+﻿@model IEnumerable<FoodOrder.Models.FoodModel>
+
+@{
+    ViewData["Title"] = "Display";
+}
+
+<h1>Food List</h1>
+<body style="background-color: #FFF9C4 !important">
+    <table class="table table-striped">
+        <thead>
+            <tr style="font-size:20px !important">
+                <th>
+                    @Html.DisplayNameFor(model => model.FoodName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FoodPrice)
+                </th>
+                <th>
+                    Buy
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="tabletxt">
+                        @Html.DisplayFor(modelItem => item.FoodName)
+                    </td>
+                    <td class="tabletxt">
+                        Rs. @Html.DisplayFor(modelItem => item.FoodPrice)
+                    </td>
+                    <td>
+                        <a href="../Order/Create"><img src="~/Images/buy.png"style="width:45px"/></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

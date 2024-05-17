@@ -1,0 +1,81 @@
+﻿@model FoodOrder.Models.OrderModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!--https://localhost:5001/Order/Details/7003-->
+<body style="background-color: #FFF9C4;">
+    <div class="container ">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-5 text-center">
+                <h1>Your Bill</h1>
+                <hr />
+                <br />
+                <dl class="row text-left" style="font-size:18px !important; height:160px !important;">
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.PersonName)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.PersonName)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.PersonAddress)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.PersonAddress)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Quantity)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Quantity)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Total)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Total)
+                    </dd>
+                </dl>
+                <br />
+                <div>
+                    <button id="btn" type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+                        Continue
+                    </button>
+                    <a id="btn" class="btn btn-warning" href="@Url.Action("Edit", "Order", new { id = Model.Id })">
+                        Edit
+                    <a />
+                    <a id="btn" class="btn btn-danger" href="@Url.Action("Delete", "Order", new { id = Model.Id })">
+                        Cancel
+                    <a />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <img src="~/Images/girl.png" style="width:250px;"/>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Thank you  @Html.DisplayFor(model => model.PersonName)! 😄</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="../../Home/Index" class="btn btn-light rounded">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

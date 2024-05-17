@@ -1,0 +1,49 @@
+﻿@model FoodOrder.Models.OrderModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Order Food</h1>
+
+<hr />
+<body style="background-color: #FFF9C4;">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PersonName" class="control-label col-3"></label>
+                    <input id="textboxcolor" asp-for="PersonName" class="form-control" />
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PersonAddress" class="control-label col-3"></label>
+                    <input id="textboxcolor" asp-for="PersonAddress" class="form-control" />
+                    <span asp-validation-for="PersonAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FoodId" class="control-label col-3"></label>
+                    <select id="textboxcolor" asp-for="FoodId" asp-items="Model.foodItem" class="form-control">
+                    </select>
+                    <span asp-validation-for="FoodId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quantity" class="control-label col-3"></label>
+                    <input id="textboxcolor" asp-for="Quantity" class="form-control" />
+                    <span asp-validation-for="Quantity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input id="CreateBtn" type="submit" value="Order" class="btn btn-warning" />
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+            <img src="~/Images/Waiter.png" style="width:400px"/>
+        </div>
+    </div>
+</body>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

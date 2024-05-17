@@ -1,0 +1,200 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    background-color: #212121;
+    line-height: 60px; /* Vertically center the text there */
+    border: none !important;
+    color: #EDE7F6 !important;
+}
+
+/* For Home Buttons*/
+.center {
+    padding: 180px 0;
+    text-align: center;
+}
+
+#homeBtn {
+    height: 80px;
+    width: 220px;
+    font-size: 20px;
+    padding:25px;
+    vertical-align:central;
+    color:black !important;
+    font-weight:bolder;
+    opacity: 0.8;
+}
+
+/* For Display View */
+
+.tabletxt {
+    font-size:18px !important;
+}
+
+.table td, .table th, .table tr, .table thead {
+    border: none !important;
+}
+
+/*Navbar*/
+
+/* change the background color */
+.navbar-custom {
+    background-color: #212121;
+    font-size:18px;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+     color: #EDE7F6 !important;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+     color: #EDE7F6 !important;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+     color: #EDE7F6 !important;
+}
+
+.navbar-default .navbar-nav li a {
+    color: #fff;
+}
+
+.navbar {
+    border: none !important;
+}
+
+.navbar-toggler {
+    border-color: #EDE7F6;
+}
+
+.navbar-toggler-icon {
+    background-color: #EDE7F6;
+}
+
+/* Navlink color */
+
+.nav-item :hover {
+    background-color: #FFC400 !important;
+    border-radius: 5px;
+    opacity: 0.9;
+    color: black !important;
+}
+
+.nav-item {
+    background-color: transparent !important;
+    margin: 5px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+/* Create page */
+
+.form-control:focus {
+    border-color: none !important;
+    box-shadow: none !important;
+    border: none;
+}
+
+#textboxcolor {
+    background-color: #212121 !important;
+    color: #EDE7F6 !important;
+    opacity: 0.9;
+}
+
+.control-label {
+    font-weight:bold;
+    font-size:20px;
+}
+
+#CreateBtn {
+    opacity:0.8;
+    color:black !important;
+    width:150px !important;
+}
+
+/* Details Page */
+
+#btn {
+    width:100px !important;
+}
+
+/* Delete page */
+
+#delete {
+    height:70px !important;
+    font-size:20px !important;
+    color:black;
+    padding:15px;
+}
